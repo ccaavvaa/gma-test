@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "build",
+    "rootDir": "src",
+    "module": "commonjs",
+    "importHelpers": true,
+    "pretty": true,
+    "stripInternal": true,
+    "removeComments": false,
+    "newLine": "LF",
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmitOnError": true
+  },
+  "include": [
+    "./src/**.ts"
+  ]
+}

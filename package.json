@@ -1,0 +1,42 @@
+{
+  "name": "gma-test",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "description": "A TypeScript-based Gmail add-on",
+  "keywords": [
+    "gmail-add-ons",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "build:clean": "gulp clean",
+    "watch": "tsc -w",
+    "gas": "yarn run -s build && cd build && gas",
+    "upload": "npm run -s build && npm run -s upload:files",
+    "upload:files": "cd build && for FILE in `ls`; do gas push $FILE; done"
+  },
+  "author": "Dhaya Benmessaoud <d.benmessaoud@oodrive.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhayab/gmail-addon-boilerplate/issues"
+  },
+  "homepage": "https://github.com/dhayab/gmail-addon-boilerplate#readme",
+  "devDependencies": {
+    "@types/google-apps-script": "^0.0.18",
+    "del": "^2.2.1",
+    "dotbin": "^1.0.1",
+    "google-apps-script": "^2.3.0",
+    "gulp": "^3.9.1",
+    "gulp-help": "^1.6.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-copy": "^0.2.3",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-tslint": "^0.1.24",
+    "rollup-plugin-typescript2": "^0.7.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  }
+}
